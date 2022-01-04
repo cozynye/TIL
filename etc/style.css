@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  .wrapper{
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+  img{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+  }
+  
+  
+  input{
+    font-size: 14px;
+    width: 70%;
+    position: relative;
+    border-width: 1px;
+    border-color: #bbb;
+    padding : 10px 12px 10px 12px;
+    border-radius: 8px;
+  }
+  
+  .icon{
+    top:-30px;
+    left:120px;
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+  }
+  .icon-two{
+      width: 50px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  
+  button {
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    border: none;
+    border-radius: 4px;
+  }
+  
