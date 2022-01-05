@@ -1,0 +1,16 @@
+body{
+    box-sizing: border-box;
+    font-family: "Noto Sans KR",sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
