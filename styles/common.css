@@ -13,4 +13,8 @@ p {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin-top: 10px;
+}
+li{
+    margin: 4px;
 }
