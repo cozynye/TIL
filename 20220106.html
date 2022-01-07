@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/1024px-HTTP_logo.svg.png"
-        width="500px">
+    <img style="margin: 0 auto;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/1024px-HTTP_logo.svg.png"
+        width="100%">
     <h2>📌 HTTP란?</h2>
     <p>하이퍼 텍스트를 빠르게 교환하기 위한 프로토콜의 일종으로, 서버와 클라이언트 사이에서 어떻게 메시지를 교환할지를 정해놓은 규칙</p>
     <p><strong>HyperText</strong> - 문서와 문서가 링크로 연결되어 있음을 뜻함</p>
@@ -32,54 +33,71 @@
 
 
     <h2>📌 HTTP 메시지</h2>
-    <p>HTTP는 요청(Request)과 응답(Response)로 구성되어 있고, 클라이언트가 요청을 하면 서버가 응답을 하는 구조이다.</p>
-    <img alt="http-message" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages/httpmsgstructure2.png">
+    <p>HTTP는 요청(Request)과 응답(Response)으로 구성되어 있고, 클라이언트가 요청을 하면 서버가 응답을 하는 구조이다.</p>
+    <img alt="http-message" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages/httpmsgstructure2.png"
+        width="100%">
 
     <h3>🚀 Request</h3>
-    <p><strong>요청(request)</strong>은 클라이언트가 서버로 전달하는 메시지</p>
-    <p>Request는 요청 라인(request line), 요청 헤더(request Headers), 공백라인, 요청 바디(Request Body)로 나뉜다.</p>
-    <p>요청 라인: HTTP Method, URI, HTTP version</p>
-    <blockquote>
-        <h5>HTTP Request Methods</h5>
-        <ul>
-            <li>GET : 데이터를 받아오기만 할 때 사용 / 웹페이지에 접속해서 필요한 데이터를 불러올 때 사용</li>
-            <li>POST : 데이터를 생성/수정할 때 사용 , Body에 담는 내용이 핵심!</li>
-            <li>DELETE : 서버에 저장된 특정 데이터를 삭제할 때 사용</li>
-        </ul>
+    <p><strong>요청(Request)</strong>은 클라이언트가 서버로 전달하는 메시지</p>
+    <p>Request는 요청 라인(Request line), 요청 헤더(Request Headers), 공백라인, 요청 바디(Request Body)로 나뉜다.</p>
+    <p><strong>요청 라인</strong> : 요청의 첫번째 줄 / HTTP Method, URI, HTTP version로 구성되어 있음
+    <ul>
+        <li>HTTP Method : 해당 요청이 의도한 액션을 정의한 부분</li>
+        <blockquote>
+            <h5>HTTP Request Methods</h5>
+            <ul>
+                <li>GET : 데이터를 받아오기만 할 때 사용 / 웹페이지에 접속해서 필요한 데이터를 불러올 때 사용</li>
+                <li>POST : 데이터를 생성/수정할 때 사용 , Body에 담는 내용이 핵심!</li>
+                <li>DELETE : 서버에 저장된 특정 데이터를 삭제할 때 사용</li>
+            </ul>
+        </blockquote>
+        <li>URI : 해당 request가 전송되는 목표 url</li>
+        <li>HTTP version : HTTP 버전, 주로 1.1버전이 널리 쓰인다.</li>
+    </ul>
 
-
-
-    </blockquote>
-    <p>요청 헤더: Host, Accept, User-Agent, Cookie, Referer</p>
+    </p>
+    <p><strong>요청 헤더</strong>: 해당 요청에 대한 추가 정보를 담고 있는 부분</p>
     <blockquote>
         <ul>
             <li>Host: 클라이언트가 요청한 도메인 정보</li>
             <li>Accept: 웹 서버로부터 수신되는 데이터 중 웹 브라우저가 처리할 수 있는 데이터의 형식 정의</li>
             <li>User-Agent: 사용자 웹 브라우저 종류 및 버전 정보</li>
             <li>Cookie: 클라이언트 로컬에 저장되는 key-value쌍의 데이터 파일</li>
+            <li>Content-Type: 해당 요청이 보내는 메시지 body 타입</li>
+            <li>Authorization: 회원의 인증/인가를 처리하기 위한 로그인 토큰</li>
             <li>Referer: 경유한 웹 사이트에 대한 정보</li>
         </ul>
     </blockquote>
-    <p>요청 바디: 클라이언트가 서버에 실제 요청한 내용</p>
+    <p><strong>요청 바디</strong>: 클라이언트가 서버에 실제 요청한 내용</p>
 
 
     <h3>🚀 Response</h3>
     <p>응답(Response)는 요청에 대한 서버의 답변이다.</p>
-    <p>Request는 요청 라인(request line), 요청 헤더(request Headers),공백라인, 요청 바디(Request Body)로 나뉜다.</p>
+    <p>Response는 응답 라인(request line), 응답 헤더(Response Headers),공백라인, 응답 바디(Response Body)로 나뉜다.</p>
 
-    <p>상태 라인: HTTP Version, Status Code</p>
-    <p>응답헤더: Date, Server, Content-Type, Last-Modified</p>
-    <p>응답 바디: 실제 응답받은 메시지(데이터)</p>
+    <p><strong>응답 라인</strong>: 응답의 상태 줄 / HTTP Version, Status Code, 로 구성</p>
+    <ul>
+        <li>HTTP Version : 요청의 HTTP버전과 동일</li>
+        <li>Status Code : 응답 메시지의 상태 코드</li>
+        <blockquote>
+            <h5>HTTP Response status code</h5>
+            <ul>
+                <li>Success - 200 : ok / 201 : Created</li>
+                <li>Error - 400 : Bad Request/ 401 : Unauthorized / 403 : Forbidden / 404 : Not Found</li>
+                <li>Server Error - 500 : Internal Server Error</li>
+            </ul>
+        </blockquote>
+        <li>Status Text : 응답 메시지의 상태를 간략하게 설명해주는 텍스트</li>
+    </ul>
+    <p><strong>응답 헤더</strong>: 요청의 헤더와 동일하며 응답의 추가 정보를 담고 있다.</p>
+    <p><strong>응답 바디</strong>: 실제 응답받은 메시지(데이터)</p>
+
+
 
     <blockquote>
-        <h5>HTTP request Methods - status code</h5>
-        <ul>
-            <li>Success - 200 : ok / 201 : Created</li>
-            <li>Error - 400 : Bad Request/ 401 : Unauthorized / 403 : Forbidden / 404 : Not Found</li>
-            <li>Server Error - 500 : Internal Server Error</li>
-        </ul>
+        출처 : <a href="https://developer.mozilla.org/ko/docs/Web/HTTP"
+            target="_blank">https://developer.mozilla.org/ko/docs/Web/HTTP</a>
     </blockquote>
-
 
 </body>
 

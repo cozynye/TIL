@@ -17,4 +17,8 @@ p {
 }
 li{
     margin: 4px;
+    list-style: none;
+}
+ul{
+    margin: 0;
 }
