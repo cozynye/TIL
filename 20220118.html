@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        details{
+            width: 300px;
+        } 
+        details[open]{
+        background-color: #cdedfd;
+        background-image: linear-gradient(
+            319deg,
+            #cedefd 0%,
+            #ffec82 37%,
+            #ffcfd2 100%
+        );
+       }
+    </style>
+</head>
+<body>
+    <details >
+        <summary>오늘은 점심은????</summary>
+        무엇을 먹을까 고민해보자<br/>
+        한식, 일식, 중식, 양식 그중의 최고는 국밥이였다네.
+    </details>
+
+    <input type="date">
+
+    <input type="month">
+
+    <input type="week">
+    
+    <input type="time">
+
+    <picture>
+        <source srcset="https://images.unsplash.com/photo-1642019113710-9af01da6be2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60" media="(min-width:1200px)">
+        <source srcset="https://images.unsplash.com/photo-1642425149556-b6f90e946859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" media="(min-width:900px)">
+        <source srcset="https://images.unsplash.com/photo-1642372131426-f811f00a1920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" media="(min-width:400px)">
+        <img src="https://images.unsplash.com/photo-1640622332859-55e65253475d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"/>
+    </picture>
+
+
+    <label for="movie">What is your favorite food?</label>
+    <input type="text" list="movie-options"/>
+    <datalist id="movie-options">
+        <option value="pizza"/>
+        <option value="Kukbab"/>
+        <option value="apple"/>
+        <option value="banana"/>
+        <option value="noodle"/>
+        <option value="steak"/>
+        <option value="Kimbap"/>
+        <option value="soju"/>
+        <option value="beer"/>
+        <option value="mcdonald"/>
+    </datalist>
+
+</body>
+</html>
