@@ -1,20 +1,32 @@
-const getClothes = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('1. 옷을 입다 '), 1000);
-});
+var one = 1;
 
-const openDoor = (cloth) =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => reject(new Error(`${cloth} 2.문을 연다`)), 1000);
-  });
+console.log(prev)// undefined
 
-const goOut = (door) =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve(`${door} 3. 밖으로 나간다`), 1000);
-  });
+function change(){
+  console.log(one);
 
-getClothes
-  .then((cloth) => openDoor(cloth))
-  .catch(error=> '2. 창문을 연다')
-  .then((door) => goOut(door))
-  .then((sentence) => console.log(sentence))
-  .catch(console.log);
+  let two = 2;
+  const three = 3;
+
+  
+
+  console.log(two);
+  console.log(three);
+
+  one = 11;
+  two = 22;
+  // three=33;  Uncaught TypeError: Assignment to constant variable.
+}
+var prev=3
+change();
+
+console.log(one); // 11
+
+var one = '일입니다'
+
+console.log(one); // 일입니다
+
+// console.log(two); //two is not defined at
+
+const three = 33;
+console.log(three); //33 
