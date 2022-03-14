@@ -1,6 +1,6 @@
 var one = 1;
 
-console.log(prev)// undefined
+console.log(prev) // undefined 자바스크립트 호이스팅 특성
 
 function change(){
   console.log(one);
